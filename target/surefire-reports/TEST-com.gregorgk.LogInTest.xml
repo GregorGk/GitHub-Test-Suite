@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.gregorgk.LogInTest" time="4.794" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="9"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/grzzpo/Documents/githubtestsuite/target/test-classes:/home/grzzpo/Documents/githubtestsuite/target/classes:/home/grzzpo/.m2/repository/com/google/guava/guava/21.0/guava-21.0.jar:/home/grzzpo/.m2/repository/io/github/bonigarcia/webdrivermanager/2.2.0/webdrivermanager-2.2.0.jar:/home/grzzpo/.m2/repository/org/slf4j/slf4j-api/1.7.24/slf4j-api-1.7.24.jar:/home/grzzpo/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/home/grzzpo/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/home/grzzpo/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/grzzpo/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/grzzpo/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/grzzpo/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/grzzpo/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/grzzpo/.m2/repository/org/rauschig/jarchivelib/0.7.1/jarchivelib-0.7.1.jar:/home/grzzpo/.m2/repository/org/apache/commons/commons-compress/1.9/commons-compress-1.9.jar:/home/grzzpo/.m2/repository/org/jsoup/jsoup/1.10.2/jsoup-1.10.2.jar:/home/grzzpo/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/grzzpo/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/grzzpo/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/grzzpo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/grzzpo/.m2/repository/org/json/json/20180130/json-20180130.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-java/3.0.0-beta3/selenium-java-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.0.0-beta3/selenium-chrome-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.0.0-beta3/selenium-remote-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-api/3.0.0-beta3/selenium-api-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/home/grzzpo/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/grzzpo/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/home/grzzpo/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/grzzpo/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.0.0-beta3/selenium-edge-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.0.0-beta3/selenium-firefox-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.0.0-beta3/selenium-ie-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.0.0-beta3/selenium-opera-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.0.0-beta3/selenium-safari-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/io/netty/netty/3.5.7.Final/netty-3.5.7.Final.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-support/3.0.0-beta3/selenium-support-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/com/codeborne/phantomjsdriver/1.3.0/phantomjsdriver-1.3.0.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="9"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jdk-9.0.1/lib"/>
+    <property name="sun.java.command" value="/home/grzzpo/Documents/githubtestsuite/target/surefire/surefirebooter4415311267941227696.jar /home/grzzpo/Documents/githubtestsuite/target/surefire 2018-03-23T16-37-45_783-jvmRun1 surefire6362795469733984949tmp surefire_09956735601136662434tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/grzzpo/Documents/githubtestsuite/target/test-classes:/home/grzzpo/Documents/githubtestsuite/target/classes:/home/grzzpo/.m2/repository/com/google/guava/guava/21.0/guava-21.0.jar:/home/grzzpo/.m2/repository/io/github/bonigarcia/webdrivermanager/2.2.0/webdrivermanager-2.2.0.jar:/home/grzzpo/.m2/repository/org/slf4j/slf4j-api/1.7.24/slf4j-api-1.7.24.jar:/home/grzzpo/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/home/grzzpo/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/home/grzzpo/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/grzzpo/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/grzzpo/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/grzzpo/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/grzzpo/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/grzzpo/.m2/repository/org/rauschig/jarchivelib/0.7.1/jarchivelib-0.7.1.jar:/home/grzzpo/.m2/repository/org/apache/commons/commons-compress/1.9/commons-compress-1.9.jar:/home/grzzpo/.m2/repository/org/jsoup/jsoup/1.10.2/jsoup-1.10.2.jar:/home/grzzpo/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/grzzpo/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/grzzpo/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/grzzpo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/grzzpo/.m2/repository/org/json/json/20180130/json-20180130.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-java/3.0.0-beta3/selenium-java-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.0.0-beta3/selenium-chrome-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.0.0-beta3/selenium-remote-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-api/3.0.0-beta3/selenium-api-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/home/grzzpo/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/grzzpo/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/home/grzzpo/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/grzzpo/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.0.0-beta3/selenium-edge-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.0.0-beta3/selenium-firefox-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.0.0-beta3/selenium-ie-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.0.0-beta3/selenium-opera-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.0.0-beta3/selenium-safari-driver-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/io/netty/netty/3.5.7.Final/netty-3.5.7.Final.jar:/home/grzzpo/.m2/repository/org/seleniumhq/selenium/selenium-support/3.0.0-beta3/selenium-support-3.0.0-beta3.jar:/home/grzzpo/.m2/repository/com/codeborne/phantomjsdriver/1.3.0/phantomjsdriver-1.3.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/grzzpo"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/usr/lib/jdk-9.0.1"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/grzzpo/Documents/githubtestsuite"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/grzzpo/Documents/githubtestsuite/target/surefire/surefirebooter4415311267941227696.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="9.0.1+11"/>
+    <property name="user.name" value="grzzpo"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="4.4.0-116-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="browser" value="CHROME"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/grzzpo/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2017.2.6"/>
+    <property name="java.version" value="9.0.1"/>
+    <property name="user.dir" value="/home/grzzpo/Documents/githubtestsuite"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/home/grzzpo/Downloads/idea-IC-172.4343.14/bin::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="9.0.1+11"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="53.0"/>
+  </properties>
+  <testcase name="assertSourceContainsTheRightUsername" classname="com.gregorgk.LogInTest" time="0.04"/>
+  <testcase name="assertSourceContainsSignedInMessage" classname="com.gregorgk.LogInTest" time="0.031"/>
+</testsuite>
