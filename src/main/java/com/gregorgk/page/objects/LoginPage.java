@@ -23,7 +23,7 @@ public class LoginPage {
   /**
    * Used to log in to GitHub.
    */
-  public void signIn(WebDriver driver) throws IOException {
+  public void signIn(WebDriver driver) {
     PageFactory.initElements(driver, this);
     driver.get(LoginPage.getUrl());
     Credentials credentials = new Credentials();

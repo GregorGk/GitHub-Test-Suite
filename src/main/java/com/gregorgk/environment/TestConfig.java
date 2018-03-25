@@ -19,7 +19,7 @@ public class TestConfig {
   /**
    * Used to set up logger and browser.
    */
-  public static synchronized void setUp() throws IOException {
+  public static synchronized void setUp() {
     driver = new WebDriverSupplier().get();
     credentials = new Credentials();
   }
@@ -43,5 +43,9 @@ public class TestConfig {
 
   public static String getUsername() {
     return credentials.getUsername();
+  }
+
+  public static String getToken() {
+    return credentials.getToken();
   }
 }

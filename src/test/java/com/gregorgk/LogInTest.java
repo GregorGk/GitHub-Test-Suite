@@ -20,7 +20,7 @@ public class LogInTest {
    * Prepares test environment and opens the right page.
    */
   @BeforeClass
-  public static void setUp() throws IOException {
+  public static void setUp() {
     TestConfig.setUp();
     LoginPage loginPage = new LoginPage();
     loginPage.signIn(TestConfig.getDriver());
