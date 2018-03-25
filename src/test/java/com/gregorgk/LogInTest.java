@@ -2,18 +2,19 @@ package com.gregorgk;
 
 import com.gregorgk.environment.TestConfig;
 import com.gregorgk.page.objects.LoginPage;
+import com.gregorgk.utils.Assertion;
 import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LogInTest {
 
   @Rule
   public ErrorCollector collector = new ErrorCollector();
+  Assertion assertion = new Assertion();
 
   /**
    * Prepares test environment and opens the right page.
@@ -32,34 +33,17 @@ public class LogInTest {
 
   @Test
   public void assertSourceContainsSignedInMessage() {
-    boolean thrown = false;
-    try {
-      new WebDriverWait(TestConfig.getDriver(), 10)
-          .until(driver -> driver.getPageSource().contains("Signed in as"));
-    } catch (Throwable e) {
-      thrown = true;
-      collector.addError(new Exception("Page source does not contain: Signed in as.", e));
-    } finally {
-      if (!thrown) {
-        TestConfig.getLogger().info("Login successfull.");
-      }
-    }
+    assertion.assertSourceContains(
+        "Signed in as",
+        "Login successfull.",
+        collector);
   }
 
   @Test
   public void assertSourceContainsTheRightUsername() {
-    boolean thrown = false;
-    try {
-      new WebDriverWait(TestConfig.getDriver(), 10)
-          .until(driver -> driver.getPageSource().contains("HSBCapplicationTestUser"));
-    } catch (Throwable e) {
-      thrown = true;
-      collector.addError(
-          new Exception("Page source does not contain the username: HSBCapplicationTestUser.", e));
-    } finally {
-      if (!thrown) {
-        TestConfig.getLogger().info("Logged in with the right username.");
-      }
-    }
+    assertion.assertSourceContains(
+        TestConfig.getUsername(),
+        "Logged in with the right username.",
+        collector);
   }
 }

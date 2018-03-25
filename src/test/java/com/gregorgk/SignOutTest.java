@@ -3,18 +3,19 @@ package com.gregorgk;
 import com.gregorgk.environment.TestConfig;
 import com.gregorgk.page.objects.HeaderNavigation;
 import com.gregorgk.page.objects.LoginPage;
+import com.gregorgk.utils.Assertion;
 import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignOutTest {
 
   @Rule
   public ErrorCollector collector = new ErrorCollector();
+  Assertion assertion = new Assertion();
 
   /**
    * Prepares test environment and opens the right page.
@@ -33,37 +34,20 @@ public class SignOutTest {
     TestConfig.getDriver().close();
   }
 
+  @Test
+  public void assertThatSourceDoesNotContainSignedInMessage() {
+    assertion.assertSourceDoesNotContain(
+        "Signed in as",
+        "Signout successfull.",
+        collector);
+  }
 
   @Test
   public void assertThatSourceDoesNotContainTheUsername() {
-    boolean thrown = false;
-    try {
-      new WebDriverWait(TestConfig.getDriver(), 10)
-          .until(driver -> !driver.getPageSource().contains("HSBCapplicationTestUser"));
-    } catch (Throwable e) {
-      thrown = true;
-      collector.addError(
-          new Exception("Page source contains the username: HSBCapplicationTestUser.", e));
-    } finally {
-      if (!thrown) {
-        TestConfig.getLogger().info("No username after found log out.");
-      }
-    }
+    assertion.assertSourceDoesNotContain(
+        TestConfig.getUsername(),
+        "No username after found log out.",
+        collector);
   }
 
-  @Test
-  public void assertThatSourceDoesNotContainSignedInMessage() {
-    boolean thrown = false;
-    try {
-      new WebDriverWait(TestConfig.getDriver(), 10)
-          .until(driver -> !driver.getPageSource().contains("Sigccned in as"));
-    } catch (Throwable e) {
-      thrown = true;
-      collector.addError(new Exception("Page source contains: Signed in as.", e));
-    } finally {
-      if (!thrown) {
-        TestConfig.getLogger().info("Signed out successfully.");
-      }
-    }
-  }
 }
