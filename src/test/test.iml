@@ -10,5 +10,8 @@
     <orderEntry type="module" module-name="main" />
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Maven: cglib:cglib-nodep:3.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:3.0.0-beta3" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:21.0" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-support:3.0.0-beta3" level="project" />
   </component>
 </module>

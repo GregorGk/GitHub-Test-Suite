@@ -24,6 +24,9 @@ public class TestConfig {
     credentials = new Credentials();
   }
 
+  /**
+   * Used to destroy browser session.
+   */
   public static synchronized void tearDown() {
     if (driver != null) {
       driver.quit();

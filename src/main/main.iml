@@ -13,5 +13,7 @@
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-firefox-driver:3.0.0-beta3" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:3.0.0-beta3" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:21.0" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20180130" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
   </component>
 </module>

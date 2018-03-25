@@ -8,9 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverSupplier implements Supplier<WebDriver> {
-;
+
   private BrowserEnum browser;
 
+  /**
+   * Used to parse the optional {@code -Dbrowser} argument from Maven console options.
+   */
   public WebDriverSupplier() {
     try {
       this.browser = BrowserEnum.valueOf(System.getProperty("browser"));

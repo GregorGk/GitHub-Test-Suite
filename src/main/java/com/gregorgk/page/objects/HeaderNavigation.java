@@ -15,6 +15,9 @@ public class HeaderNavigation {
   @FindBy(xpath = "//*[@id=\"user-links\"]/li[3]/details/ul/li[9]/form/button")
   WebElement signOutButton;
 
+  /**
+   * Signs out using the header navigation.
+   */
   public void singOut(WebDriver driver) {
     PageFactory.initElements(driver, this);
     if (!driver.getCurrentUrl().equals(HeaderNavigation.url)) {

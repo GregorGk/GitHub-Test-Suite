@@ -17,6 +17,9 @@ public class LogInTest {
   @Rule
   public ErrorCollector collector = new ErrorCollector();
 
+  /**
+   * Prepares test environment and opens the right page.
+   */
   @BeforeClass
   public static void setUp() throws IOException {
     TestConfig.setUp();

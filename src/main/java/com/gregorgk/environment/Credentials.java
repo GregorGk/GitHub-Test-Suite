@@ -11,6 +11,9 @@ public class Credentials {
   private String encryptedPassword;
   private JSONObject jsonObject = null;
 
+  /**
+   * Constructs an object for credential handling.
+   */
   public Credentials() throws IOException {
     this.parseCredentials();
     this.username = (String) this.jsonObject.get("username");
