@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/java,linux,gradle,intellij,windows,selenium
+# Created by https://www.gitignore.io/api/java,linux,maven,intellij,windows,selenium
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
@@ -105,6 +105,20 @@ hs_err_pid*
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+
 #!! ERROR: selenium is undefined. Use list command to see defined gitignore types !!#
 
 ### Windows ###
@@ -128,21 +142,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-### Gradle ###
-.gradle
-**/build/
 
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Cache of project
-.gradletasknamecache
-
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
-
-
-# End of https://www.gitignore.io/api/java,linux,gradle,intellij,windows,selenium
+# End of https://www.gitignore.io/api/java,linux,maven,intellij,windows,selenium
