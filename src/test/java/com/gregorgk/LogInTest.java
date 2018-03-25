@@ -1,6 +1,5 @@
 package com.gregorgk;
 
-import com.google.common.base.Predicate;
 import com.gregorgk.environment.TestConfig;
 import com.gregorgk.page.objects.LoginPage;
 import java.io.IOException;
@@ -9,7 +8,6 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LogInTest {
@@ -37,7 +35,7 @@ public class LogInTest {
     boolean thrown = false;
     try {
       new WebDriverWait(TestConfig.getDriver(), 10)
-          .until((Predicate<WebDriver>) driver -> driver.getPageSource().contains("Signed in as"));
+          .until(driver -> driver.getPageSource().contains("Signed in as"));
     } catch (Throwable e) {
       thrown = true;
       collector.addError(new Exception("Page source does not contain: Signed in as.", e));
@@ -53,8 +51,7 @@ public class LogInTest {
     boolean thrown = false;
     try {
       new WebDriverWait(TestConfig.getDriver(), 10)
-          .until((Predicate<WebDriver>)
-              driver -> driver.getPageSource().contains("HSBCapplicationTestUser"));
+          .until(driver -> driver.getPageSource().contains("HSBCapplicationTestUser"));
     } catch (Throwable e) {
       thrown = true;
       collector.addError(

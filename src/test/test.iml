@@ -13,5 +13,7 @@
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:3.0.0-beta3" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:21.0" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-support:3.0.0-beta3" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-support:3.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:3.4.0" level="project" />
   </component>
 </module>

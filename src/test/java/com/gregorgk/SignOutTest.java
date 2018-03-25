@@ -1,6 +1,5 @@
 package com.gregorgk;
 
-import com.google.common.base.Predicate;
 import com.gregorgk.environment.TestConfig;
 import com.gregorgk.page.objects.HeaderNavigation;
 import com.gregorgk.page.objects.LoginPage;
@@ -10,7 +9,6 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignOutTest {
@@ -41,8 +39,7 @@ public class SignOutTest {
     boolean thrown = false;
     try {
       new WebDriverWait(TestConfig.getDriver(), 10)
-          .until((Predicate<WebDriver>)
-              driver -> !driver.getPageSource().contains("HSBCapplicationTestUser"));
+          .until(driver -> !driver.getPageSource().contains("HSBCapplicationTestUser"));
     } catch (Throwable e) {
       thrown = true;
       collector.addError(
@@ -59,8 +56,7 @@ public class SignOutTest {
     boolean thrown = false;
     try {
       new WebDriverWait(TestConfig.getDriver(), 10)
-          .until((Predicate<WebDriver>)
-              driver -> !driver.getPageSource().contains("Sigccned in as"));
+          .until(driver -> !driver.getPageSource().contains("Sigccned in as"));
     } catch (Throwable e) {
       thrown = true;
       collector.addError(new Exception("Page source contains: Signed in as.", e));
