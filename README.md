@@ -4,7 +4,7 @@ Training purposes only.
 
 ## Prerequisites
 
-Java 1.8+, Maven 3.3.9.
+Java 1.8+, Maven 3.3.9+.
 
 ## Tests
 
