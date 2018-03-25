@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="githubtestsuite" />
+        <module name="github-test-suite" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="githubtestsuite" target="1.8" />
+      <module name="github-test-suite" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

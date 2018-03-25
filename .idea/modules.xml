@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/githubtestsuite.iml" filepath="$PROJECT_DIR$/githubtestsuite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/github-test-suite.iml" filepath="$PROJECT_DIR$/github-test-suite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
     </modules>
   </component>
 </project>
