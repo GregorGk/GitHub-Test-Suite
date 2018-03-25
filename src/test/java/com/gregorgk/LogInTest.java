@@ -50,13 +50,15 @@ public class LogInTest {
     boolean thrown = false;
     try {
       new WebDriverWait(TestConfig.getDriver(), 10)
-          .until((Predicate<WebDriver>) driver -> driver.getPageSource().contains("HSBCapplicationTestUser"));
+          .until((Predicate<WebDriver>)
+              driver -> driver.getPageSource().contains("HSBCapplicationTestUser"));
     } catch (Throwable e) {
       thrown = true;
-      collector.addError(new Exception("Page source does not contain the username: HSBCapplicationTestUser.", e));
+      collector.addError(
+          new Exception("Page source does not contain the username: HSBCapplicationTestUser.", e));
     } finally {
       if (!thrown) {
-        TestConfig.getLogger().info( "Logged in with the right username.");
+        TestConfig.getLogger().info("Logged in with the right username.");
       }
     }
   }

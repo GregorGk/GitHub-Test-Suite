@@ -17,8 +17,9 @@ public class HeaderNavigation {
 
   public void singOut(WebDriver driver) {
     PageFactory.initElements(driver, this);
-    if (!driver.getCurrentUrl().equals(HeaderNavigation.url))
+    if (!driver.getCurrentUrl().equals(HeaderNavigation.url)) {
       driver.get(LoginPage.getUrl());
+    }
     headerNavigationLink.click();
     signOutButton.click();
   }

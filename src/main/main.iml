@@ -7,5 +7,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-support:3.0.0-beta3" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:3.0.0-beta3" level="project" />
+    <orderEntry type="library" name="Maven: io.github.bonigarcia:webdrivermanager:2.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-firefox-driver:3.0.0-beta3" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:3.0.0-beta3" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:21.0" level="project" />
   </component>
 </module>

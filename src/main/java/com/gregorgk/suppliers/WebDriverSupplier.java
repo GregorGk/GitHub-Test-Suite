@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverSupplier implements Supplier<WebDriver> {
-
+;
   private BrowserEnum browser;
 
   public WebDriverSupplier() {
@@ -23,7 +23,7 @@ public class WebDriverSupplier implements Supplier<WebDriver> {
    * Used to get the {@code WebDriver}.
    *
    * @return implementation of {@code WebDriver} interface according to the browser type given in
-   * constructor.
+   *         constructor.
    */
   public WebDriver get() {
     WebDriver toReturn = null;

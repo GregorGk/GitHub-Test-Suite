@@ -38,12 +38,15 @@ public class SignOutTest {
     boolean thrown = false;
     try {
       new WebDriverWait(TestConfig.getDriver(), 10)
-          .until((Predicate<WebDriver>) driver -> !driver.getPageSource().contains("HSBCapplicationTestUser"));
+          .until((Predicate<WebDriver>)
+              driver -> !driver.getPageSource().contains("HSBCapplicationTestUser"));
     } catch (Throwable e) {
       thrown = true;
-      collector.addError(new Exception("Page source contains the username: HSBCapplicationTestUser.", e));    } finally {
+      collector.addError(
+          new Exception("Page source contains the username: HSBCapplicationTestUser.", e));
+    } finally {
       if (!thrown) {
-        TestConfig.getLogger().info( "No username after found log out.");
+        TestConfig.getLogger().info("No username after found log out.");
       }
     }
   }
@@ -53,7 +56,8 @@ public class SignOutTest {
     boolean thrown = false;
     try {
       new WebDriverWait(TestConfig.getDriver(), 10)
-          .until((Predicate<WebDriver>) driver -> !driver.getPageSource().contains("Sigccned in as"));
+          .until((Predicate<WebDriver>)
+              driver -> !driver.getPageSource().contains("Sigccned in as"));
     } catch (Throwable e) {
       thrown = true;
       collector.addError(new Exception("Page source contains: Signed in as.", e));
