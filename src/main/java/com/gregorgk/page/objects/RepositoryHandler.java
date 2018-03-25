@@ -42,7 +42,7 @@ public class RepositoryHandler {
 
   public RepositoryHandler(String username) {
     this.username = username;
-    this.repositorySet = this.repositorySet(this.username);
+    this.repositorySet = this.repositorySet();
     this.repositoryName = this.pickRepositoryName();
   }
 
@@ -50,7 +50,7 @@ public class RepositoryHandler {
    * Creates a repository.
    * @return name of the created repository.
    */
-  public String createRepository(WebDriver driver) {
+  public synchronized String createRepository(WebDriver driver) {
     driver.get(RepositoryHandler.url);
     PageFactory.initElements(driver, this);
     startProjectButton.click();
@@ -64,8 +64,8 @@ public class RepositoryHandler {
   /**
    * Deletes this repository.
    */
-  public void deleteRepository() {
-    HttpHandler.makeDeleteRequestWithToken(this.repositoryName);
+  public synchronized int deleteRepository() {
+    return HttpHandler.makeDeleteRequestWithToken(this.repositoryName);
   }
 
   /**
@@ -78,9 +78,9 @@ public class RepositoryHandler {
         this.pickRepositoryName() : nameCandidate;
   }
 
-  public Set<String> repositorySet(String username) {
+  public synchronized Set<String> repositorySet() {
     Set<String> repositories = new HashSet<>();
-    String response = HttpHandler.makeGetRequest(username + "/repos");
+    String response = HttpHandler.makeGetRequest(this.username + "/repos");
     JSONArray array = new JSONArray(response);
     for (int i = 0; i < array.length(); ++i) {
       repositories.add(array.getJSONObject(i).getString("name"));

@@ -4,7 +4,6 @@ import com.gregorgk.environment.TestConfig;
 import com.gregorgk.page.objects.HeaderNavigation;
 import com.gregorgk.page.objects.LoginPage;
 import com.gregorgk.utils.Assertion;
-import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Rule;

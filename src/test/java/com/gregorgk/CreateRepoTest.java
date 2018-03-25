@@ -34,7 +34,7 @@ public class CreateRepoTest {
   @Test
   public void createRepository() {
     repositoryHandler.createRepository(TestConfig.getDriver());
-    Set<String> repositories = repositoryHandler.repositorySet(TestConfig.getUsername());
+    Set<String> repositories = repositoryHandler.repositorySet();
     assertThat(repositories, hasItem(repositoryHandler.getRepositoryName()));
   }
 

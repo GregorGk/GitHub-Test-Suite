@@ -11,18 +11,27 @@ import java.util.logging.Level;
 
 public class HttpHandler {
 
-  public static String makeGetRequest(String urn) {
+  public static synchronized String makeGetRequest(String urn) {
     return HttpHandler.makeRequest("https://api.github.com/users/" + urn,
           "GET");
   }
 
-  public static String makeDeleteRequestWithToken(String repoName) {
-    return HttpHandler.makeRequest("https://api.github.com/repos/"
-        + TestConfig.getUsername() + "/" + repoName
-        + "?access_token=" + TestConfig.getToken(), "DELETE");
+  public static synchronized int makeDeleteRequestWithToken(String repoName) {
+    int responseCode = 0;
+    try {
+      URL url = new URL("https://api.github.com/repos/"
+          + TestConfig.getUsername() + "/" + repoName
+          + "?access_token=" + TestConfig.getToken());
+      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+      connection.setRequestMethod("DELETE");
+      responseCode = connection.getResponseCode();
+    } catch (Exception e) {
+      TestConfig.getLogger().log(Level.SEVERE, e, () -> e.toString());
+    }
+    return responseCode;
   }
 
-  private static String makeRequest(String urlText, String method) {
+  private static synchronized String makeRequest(String urlText, String method) {
     StringBuilder result;
     URL url = null;
     try {
