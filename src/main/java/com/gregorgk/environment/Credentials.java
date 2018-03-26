@@ -3,6 +3,7 @@ package com.gregorgk.environment;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
 
@@ -20,7 +21,8 @@ public class Credentials {
     this.parseCredentials();
     this.username = (String) this.jsonObject.get("username");
     this.encryptedPassword = (String) this.jsonObject.get("encryptedPassword");
-    this.token = (String) this.jsonObject.get("token");
+    this.token = new String (Base64.decodeBase64(
+        (String) this.jsonObject.get("encodedToken")));
   }
 
   private void parseCredentials()  {
