@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 import com.gregorgk.environment.TestConfig;
 import com.gregorgk.page.objects.LoginPage;
 import com.gregorgk.page.objects.RepositoryHandler;
+import java.util.HashSet;
 import java.util.Set;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -39,14 +40,21 @@ public class DeleteRepoTest {
     TestConfig.getDriver().close();
     assertThat(repositoryHandler.repositorySet(),
         hasItem(repositoryHandler.getRepositoryName()));
-    this.responseCode = repositoryHandler.deleteRepository();;
+    this.responseCode = repositoryHandler.deleteRepository();
   }
 
   @Test
   public void deleteRepository() {
     assertEquals("Reponse code for repository deletion incorrect."
         + " Check or regenerate the access token.", 204, this.responseCode);
-    Set<String> repositories = repositoryHandler.repositorySet();
+    Set<String> repositories = new HashSet<>();
+    int count = 0;
+    boolean contains = true;
+    while(count < 5 && contains) {
+      repositories = repositoryHandler.repositorySet();
+      count++;
+      contains = repositories.contains(repositoryHandler.getRepositoryName());
+    }
     assertThat(repositories,
         not(hasItem(repositoryHandler.getRepositoryName())));
   }
