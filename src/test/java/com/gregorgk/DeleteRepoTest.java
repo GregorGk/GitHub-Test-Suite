@@ -44,7 +44,8 @@ public class DeleteRepoTest {
 
   @Test
   public void deleteRepository() {
-    assertEquals("Reponse code for repository deletion incorrect.", 204, this.responseCode);
+    assertEquals("Reponse code for repository deletion incorrect."
+        + " Check or regenerate the access token.", 204, this.responseCode);
     Set<String> repositories = repositoryHandler.repositorySet();
     assertThat(repositories,
         not(hasItem(repositoryHandler.getRepositoryName())));
