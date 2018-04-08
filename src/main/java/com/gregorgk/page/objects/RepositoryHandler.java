@@ -23,19 +23,6 @@ public class RepositoryHandler {
   @FindBy(xpath = "//*[@id=\"new_repository\"]/div[3]/button")
   WebElement submitButton;
 
-  @FindBy(xpath = "//*[@id=\"js-repo-pjax-container\"]/div[1]/nav/a[4]")
-  WebElement settings;
-
-  @FindBy(xpath = "(//*[text()[contains(., 'Delete this repository')]])[1]")
-  WebElement deleteButton;
-
-  @FindBy(xpath = "//input[@aria-label="
-      + "\"Type in the name of the repository to confirm that you want to delete this repository.\"]")
-  WebElement inputField;
-
-  @FindBy(xpath = "//*[text() = 'foobar']")
-  WebElement submitRemoval;
-
   private String repositoryName;
   private Set<String> repositorySet;
   private String username;
