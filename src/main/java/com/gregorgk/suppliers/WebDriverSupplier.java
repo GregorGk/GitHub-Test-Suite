@@ -16,7 +16,7 @@ public class WebDriverSupplier implements Supplier<WebDriver> {
    */
   public WebDriverSupplier() {
     try {
-      this.browser = BrowserEnum.valueOf(System.getProperty("browser"));
+      this.browser = BrowserEnum.valueOf(System.getProperty("browser").toUpperCase());
     } catch (IllegalArgumentException | NullPointerException e) {
       this.browser = BrowserEnum.CHROME;
     }

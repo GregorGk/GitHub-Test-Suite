@@ -1,7 +1,6 @@
 package com.gregorgk.environment;
 
 import com.gregorgk.suppliers.WebDriverSupplier;
-import java.io.IOException;
 import java.util.logging.Logger;
 import org.openqa.selenium.WebDriver;
 
@@ -35,10 +34,6 @@ public class TestConfig {
 
   public static WebDriver getDriver() {
     return driver;
-  }
-
-  public static String getEncryptedPassword() {
-    return credentials.getEncryptedPassword();
   }
 
   public static String getUsername() {

@@ -1,7 +1,6 @@
 package com.gregorgk.page.objects;
 
 import com.gregorgk.environment.Credentials;
-import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,7 +28,7 @@ public class LoginPage {
     Credentials credentials = new Credentials();
     this.signIn(
         credentials.getUsername(),
-        credentials.getEncryptedPassword());
+        credentials.getPassword());
   }
 
   private void signIn(
