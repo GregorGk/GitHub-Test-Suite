@@ -1,5 +1,6 @@
 package com.gregorgk.page.objects;
 
+import com.gregorgk.environment.TestConfig;
 import com.gregorgk.utils.HttpHandler;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,6 +23,12 @@ public class RepositoryHandler {
 
   @FindBy(xpath = "//*[@id=\"new_repository\"]/div[3]/button")
   WebElement submitButton;
+
+  @FindBy(xpath = "//*[@id=\"vcs_url\"]")
+  WebElement oldRepositoryCloneUrlInputField;
+
+  @FindBy(xpath = "//button[contains(.,'Begin import')]")
+  WebElement importOldRepositorySubmitButton;
 
   private String repositoryName;
   private Set<String> repositorySet;
@@ -52,7 +59,7 @@ public class RepositoryHandler {
    * Deletes this repository.
    */
   public synchronized int deleteRepository() {
-    return HttpHandler.makeDeleteRequestWithToken(this.repositoryName);
+    return HttpHandler.makeRepositoryDeleteRequestWithToken(this.repositoryName);
   }
 
   /**
@@ -67,7 +74,7 @@ public class RepositoryHandler {
 
   public synchronized Set<String> repositorySet() {
     Set<String> repositories = new HashSet<>();
-    String response = HttpHandler.makeGetRequest(this.username + "/repos");
+    String response = HttpHandler.makeGetRequest("users/" + this.username + "/repos");
     JSONArray array = new JSONArray(response);
     for (int i = 0; i < array.length(); ++i) {
       repositories.add(array.getJSONObject(i).getString("name"));
@@ -77,5 +84,16 @@ public class RepositoryHandler {
 
   public String getRepositoryName() {
     return repositoryName;
+  }
+
+  public void importFromRepository(
+      WebDriver driver,
+      String oldRepositoryURL) {
+    driver.get(RepositoryHandler.url
+        + TestConfig.getUsername() + "/"
+        + this.getRepositoryName() + "/import");
+    PageFactory.initElements(driver, this);
+    oldRepositoryCloneUrlInputField.sendKeys(oldRepositoryURL);
+    importOldRepositorySubmitButton.submit();
   }
 }

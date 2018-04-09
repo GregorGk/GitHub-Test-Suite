@@ -12,11 +12,11 @@ import java.util.logging.Level;
 public class HttpHandler {
 
   public static synchronized String makeGetRequest(String urn) {
-    return HttpHandler.makeRequest("https://api.github.com/users/" + urn,
+    return HttpHandler.makeRequest("https://api.github.com/" + urn,
           "GET");
   }
 
-  public static synchronized int makeDeleteRequestWithToken(String repoName) {
+  public static synchronized int makeRepositoryDeleteRequestWithToken(String repoName) {
     int responseCode = 0;
     try {
       URL url = new URL("https://api.github.com/repos/"
@@ -34,6 +34,9 @@ public class HttpHandler {
   private static synchronized String makeRequest(String urlText, String method) {
     StringBuilder result;
     URL url = null;
+    if (!urlText.contains("?access_token")) {
+      urlText = urlText + "?access_token=" + TestConfig.getToken();
+    }
     try {
       url = new URL(urlText);
     } catch (MalformedURLException e) {
